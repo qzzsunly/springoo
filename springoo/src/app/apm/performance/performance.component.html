@@ -1,0 +1,18 @@
+<apm-performance-view></apm-performance-view>
+
+<div class="m-t-20" (clickOutside)="onClickOutside($event)">
+
+  <ngx-datatable *ngIf="rows?.length" class="material" [rows]="rows" [selectionType]="'checkbox'" [loadingIndicator]="loadingIndicator"
+    [columnMode]="'force'" [headerHeight]="50" [footerHeight]="50" [rowHeight]="'auto'" [limit]="10" (select)='onSelect($event)'
+    [selected]="selected" [reorderable]="reorderable" [scrollbarH]="true">
+
+    <ngx-datatable-column name="id" prop="id" width="80" [canAutoResize]="false"></ngx-datatable-column>
+    <ngx-datatable-column name="版本" prop="releaseStage" [width]="50"></ngx-datatable-column>
+    <ngx-datatable-column name="响应时间" prop="connect" width="80" [canAutoResize]="false"></ngx-datatable-column>
+    <ngx-datatable-column name="DNS查询时间" prop="dns" width="100" [canAutoResize]="false"></ngx-datatable-column>
+    <ngx-datatable-column name="白屏时间" prop="black_waiting_time" width="100" [canAutoResize]="false"></ngx-datatable-column>
+    <ngx-datatable-column name="资源加载时间" prop="total_time" width="100" [canAutoResize]="false"></ngx-datatable-column>
+    <ngx-datatable-column name="访问地址" prop="url" width="500"></ngx-datatable-column>
+  </ngx-datatable>
+
+</div>
