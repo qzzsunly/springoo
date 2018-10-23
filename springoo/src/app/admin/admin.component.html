@@ -13,6 +13,24 @@
     <stbui-header [customizer]="customizer" [sidenav]="sidenav" [ngClass]="settings.colorClasses.header" *ngIf="settings.layout.header=='below'"></stbui-header>
 
     <div class="main-container" #scrollContainer>
+      <div class="crumbs clearfix">
+        <ul>
+          <ng-container  *ngFor="let menu of menuList">
+            <ng-container *ngIf="menu.isSelect">
+              <li class="isSelect">
+                <a routerLink="/{{ menu.module }}">{{ menu.title }}</a>
+                <span (click)="closeUrl(menu.module,menu.isSelect)">X</span>
+              </li>
+            </ng-container>
+            <ng-container *ngIf="!menu.isSelect">
+              <li>
+                <a routerLink="/{{ menu.module }}">{{ menu.title }}</a>
+                <span  (click)="closeUrl(menu.module,menu.isSelect)">X</span>
+              </li>
+            </ng-container>
+          </ng-container>
+        </ul>
+      </div>
       <router-outlet (activate)="onActivate($event, scrollContainer)"></router-outlet>
     </div>
 

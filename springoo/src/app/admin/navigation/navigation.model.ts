@@ -18,10 +18,10 @@ export class NavigationModel {
         'icon': 'format_color_text',
         'children': [
           {
-            'id': 'def',
+            'id': 'form-def',
             'title': '表单定义',
             'type': 'item',
-            'url': '/form/def/listJson'
+            'url': '/form/def/list'
           },
           {
             'id': 'form-list',

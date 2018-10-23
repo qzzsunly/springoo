@@ -19,6 +19,9 @@ import { FireBaseComponentsModule } from './shared/firebase.module';
 
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import {SimpleReuseStrategy} from './simple-reuse-strategy';
+import {RouteReuseStrategy} from '@angular/router';
+import {FormModule} from './form/form.module';
 
 @NgModule({
   declarations: [
@@ -36,11 +39,14 @@ import { environment } from '../environments/environment';
     AppRoutingModule,
     FireBaseComponentsModule,
     ReactiveFormsModule,
+    FormModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production
     })
   ],
-  providers: [],
+  providers: [{
+    provide: RouteReuseStrategy, useClass: SimpleReuseStrategy
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

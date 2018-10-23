@@ -3,11 +3,11 @@ import { BehaviorSubject } from 'rxjs';
 
 @Injectable()
 export class ConfigService {
+  public static  baseUrl = 'http://localhost:8090/';
 
   settings: any;
   defaultSettings: any;
   onSettingsChanged: BehaviorSubject<any>;
-
   constructor() {
     this.defaultSettings = {
       colorClasses: {
