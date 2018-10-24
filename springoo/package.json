@@ -8,7 +8,7 @@
   "main": "dist/electron.js",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --hmr --configuration=development",
+    "start": "ng serve --hmr --configuration=development --proxy-config proxy.config.json",
     "build": "ng build --configuration=production --stats-json",
     "build:github": "ng build --configuration=github --stats-json --base-href=/angular-material-app/",
     "build:github:ngsw": "ng build --configuration=github",

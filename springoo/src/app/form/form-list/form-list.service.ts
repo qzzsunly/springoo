@@ -23,7 +23,7 @@ export class FormListService {
       { id: '1', name: 'demo' }
     ];
     this.dataStore = d;
-    return this.httpUtil.getData('form/list');
+    return this.httpUtil.getData('api/form/list');
   }
 
   add(data) {
