@@ -108,9 +108,15 @@ export class StartupService {
             icon: 'anticon anticon-appstore-o'
           },
           {
-            text: '快捷菜单',
+            text: '表单管理',
+            link: '/form',
             icon: 'anticon anticon-rocket',
-            shortcutRoot: true
+            children:[
+              {
+              text: '表单列表',
+              link: '/form/list',
+              icon: 'anticon anticon-rocket'}
+            ]
           }
         ]
       }

@@ -83,7 +83,7 @@ const GLOBAL_CONFIG_PROVIDES = [
     DelonCacheModule.forRoot(),
     DelonUtilModule.forRoot(),
     // mock
-    ...MOCK_MODULES,
+    // ...MOCK_MODULES,
   ],
 })
 export class DelonModule {

@@ -22,7 +22,8 @@ import { environment } from '@env/environment';
  */
 @Injectable()
 export class DefaultInterceptor implements HttpInterceptor {
-  constructor(private injector: Injector) {}
+  constructor(private injector: Injector) {
+  }
 
   get msg(): NzMessageService {
     return this.injector.get(NzMessageService);
@@ -84,17 +85,19 @@ export class DefaultInterceptor implements HttpInterceptor {
   intercept(
     req: HttpRequest<any>,
     next: HttpHandler,
-  ): Observable<
-    | HttpSentEvent
+  ): Observable<| HttpSentEvent
     | HttpHeaderResponse
     | HttpProgressEvent
     | HttpResponse<any>
-    | HttpUserEvent<any>
-  > {
+    | HttpUserEvent<any>> {
     // 统一加上服务端前缀
     let url = req.url;
     if (!url.startsWith('https://') && !url.startsWith('http://')) {
-      url = environment.SERVER_URL + url;
+      if (url.startsWith('/api')) {
+        url = environment.SERVER_URL + url;
+      } else {
+        url = environment.WEB_URL = url;
+      }
     }
 
     const newReq = req.clone({
