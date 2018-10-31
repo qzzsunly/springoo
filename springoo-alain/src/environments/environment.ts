@@ -4,9 +4,9 @@
 
 export const environment = {
   WEB_URL: `./`,
-  SERVER_URL: `http://localhost:8090/`,
+  SERVER_URL: `http://10.96.2.107:8090/`,
   production: false,
-  useHash: true,
+  useHash: false,
   hmr: false,
 };
 

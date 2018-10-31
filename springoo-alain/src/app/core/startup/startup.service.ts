@@ -115,7 +115,25 @@ export class StartupService {
               {
               text: '表单列表',
               link: '/form/list',
-              icon: 'anticon anticon-rocket'}
+              icon: 'anticon anticon-rocket'},
+              {
+                text: '表单元数据定义',
+                link: '/form/def/list',
+                icon: 'anticon anticon-rocket'}
+            ]
+          },{
+            text: '业务对象',
+            icon: 'anticon anticon-rocket',
+            link: '/bo',
+            children:[
+              {
+              text: '实体对象',
+              link: '/bo/ent/list',
+              icon: 'anticon anticon-rocket'},
+              {
+                text: '业务对象定义',
+                link: '/bo/def/list',
+                icon: 'anticon anticon-rocket'}
             ]
           }
         ]
