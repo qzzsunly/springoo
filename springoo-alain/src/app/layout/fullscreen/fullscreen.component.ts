@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   host: {
     '[class.alain-fullscreen]': 'true',
   },
+  host: {
+    '[class.alain-fullscreen]': 'true',
+  },
+  host: {
+    '[class.alain-fullscreen]': 'true',
+  },
 })
 export class LayoutFullScreenComponent {}
