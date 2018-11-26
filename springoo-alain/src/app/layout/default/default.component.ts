@@ -41,6 +41,10 @@ import { DOCUMENT } from '@angular/common';
   host: {
     '[class.alain-default]': 'true',
   },
+  preserveWhitespaces: false,
+  host: {
+    '[class.alain-default]': 'true',
+  },
 })
 export class LayoutDefaultComponent
   implements OnInit, AfterViewInit, OnDestroy {
