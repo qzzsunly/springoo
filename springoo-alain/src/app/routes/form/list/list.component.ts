@@ -20,8 +20,8 @@ export class FormListComponent implements OnInit {
   @ViewChild('st') st: STComponent;
   columns: STColumn[] = [
     { title: '名称', index: 'name' },
-    { title: '表单key', index: 'form_key' },
-    { title: '分类',   index: 'type_name' },
+    { title: '表单key', index: 'formKey' },
+    { title: '分类',   index: 'typeName' },
     { title: '状态',  index: 'status' },
     {
       title: '',
